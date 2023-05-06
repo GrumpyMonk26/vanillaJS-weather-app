@@ -28,6 +28,9 @@ form input[type='text'] {
   outline: none;
   font-size: 18px;
   width: 60%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  margin-right: 10px;
+  border-radius: 5px;
 }
 
 form input[type='submit'] {
