@@ -1,4 +1,6 @@
-const apiKey = '2f5e9dab20b292b0ccf09e1dbb2a1c8f';
+require('dotenv').config();
+
+const apiKey = process.env.API_KEY;
 
 const weatherDataEl = document.getElementById('weather-data');
 const cityInputEl = document.getElementById('city-input');
@@ -28,10 +30,6 @@ async function getWeatherData(locationValue) {
       `Humidity: ${data.main.humidity}%`,
       `Wind Speed: ${data.wind.speed}`,
     ];
-    console.log(temprature);
-    console.log(description);
-    console.log(icon);
-    console.log(details);
     weatherDataEl.querySelector('.icon').innerHTML = `<img
             src="http://openweathermap.org/img/wn/${icon}.png"
             alt="Weather Icon"
